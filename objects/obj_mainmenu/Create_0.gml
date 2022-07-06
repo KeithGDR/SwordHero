@@ -5,10 +5,12 @@ options = false;
 
 color1 = c_gray;	//unselected items
 color2 = c_white;	//selected items
-vS = 70;		//vertical space
+vS = 50;		//vertical space
 	
 menu[0] = "Play";
-menu[1] = "Quit";
+menu[1] = "Endless Mode";
+menu[2] = "Options";
+menu[3] = "Quit";
 menuitems = array_length(menu);
 cursor = 0;
 

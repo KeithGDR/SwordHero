@@ -1,7 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (global.gameover) {
+//global.health = 10000;
+
+if (global.gameover || global.winner) {
+	if (global.health < 1) {
+		image_index = 3;
+	}
+
 	if (keyboard_check(vk_space)) {
 		room_restart();
 	}
@@ -55,12 +61,16 @@ if (mouse_check_button_pressed(mb_left)) {
 	var obj2 = instance_create_layer(xpos, ypos, "Player", obj_slice);
 	obj2.image_angle = image_angle;
 	
+	image_index = 1;
 	audio_play_sound(snd_slice, 10, false);
+	audio_sound_gain(snd_slice, 0.7, 5000);
 	alarm[0] = room_speed * 0.1;
 }
 
 if (mouse_check_button_pressed(mb_right)) {
 	instance_create_layer(x, y, "Player", obj_burst);
+	image_index = 2;
 	audio_play_sound(snd_burst, 10, false);
+	audio_sound_gain(snd_burst, 0.7, 5000);
 	alarm[1] = room_speed * 0.1;
 }

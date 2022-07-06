@@ -12,3 +12,42 @@ if (point_distance(x, y, collided.x, collided.y) < 50)
 	instance_destroy(collided, true);
 	global.score++;
 }
+
+collided = instance_nearest(x, y, obj_tank);
+
+if (!instance_exists(collided)) {
+	return;
+}
+
+if (point_distance(x, y, collided.x, collided.y) < 50)
+{
+	instance_destroy(collided, true);
+	global.score++;
+}
+
+collided = instance_nearest(x, y, obj_bomba);
+
+if (!instance_exists(collided)) {
+	return;
+}
+
+if (point_distance(x, y, collided.x, collided.y) < 50)
+{
+	instance_destroy(collided, true);
+	global.score++;
+}
+
+collided = instance_nearest(x, y, obj_boss);
+
+if (!instance_exists(collided)) {
+	return;
+}
+
+var time = unix_timestamp();
+
+if (point_distance(x, y, collided.x, collided.y) < 100 && global.bosslastdamagetaken < time)
+{
+	global.bosslastdamagetaken = time + 2;
+	global.bosshealth -= 100;
+	global.score += 50;
+}

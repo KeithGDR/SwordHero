@@ -63,7 +63,7 @@ var col;
 var i;
 //draw_set_font(fnt_menu);   //add your own custom font
 draw_set_valign(fa_middle);
-draw_set_halign(fa_left);
+draw_set_halign(fa_center);
 draw_set_alpha(1);
 
 var xx = ax;
@@ -107,16 +107,18 @@ if pdown {
 if action {
 	switch cursor {
 		case 0:
-			room_goto_next();
+			randomise();
+			room_goto(level_1);
 		break;
 		case 1:
-			game_end();
+			randomise();
+			room_goto(dev);
 		break;
 		case 2:
 			//menu actions go here
 		break;
 		case 3:
-			//menu actions go here
+			game_end();
 		break;
 		case 4:
 			//menu actions go here
