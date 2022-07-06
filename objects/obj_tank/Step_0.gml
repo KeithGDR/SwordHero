@@ -21,6 +21,11 @@ if (instance_exists(obj_player)) {
 	if (position_meeting(x, y, obj_player)) {
 		if (!global.godmode && global.health > 0) {
 			global.health -= 2;
+			var time = unix_timestamp();
+			if (global.hitsoundcooldown < time) {
+				global.hitsoundcooldown = time + 0.5;
+				audio_play_sound(snd_hit, 10, false);
+			}
 		}
 	}
 }

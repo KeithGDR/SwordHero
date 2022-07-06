@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "logic",
+    "path": "folders/Objects/logic.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_version",

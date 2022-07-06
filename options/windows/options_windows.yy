@@ -1,7 +1,7 @@
 {
-  "option_windows_display_name": "Sword Hero - 2.0.0",
+  "option_windows_display_name": "Sword Hero - 2.2.0",
   "option_windows_executable_name": "${project_name}.exe",
-  "option_windows_version": "2.0.0.0",
+  "option_windows_version": "2.0.2.0",
   "option_windows_company_info": "Drixevel LLC",
   "option_windows_product_info": "Drixevel LLC",
   "option_windows_copyright_info": "Drixevel LLC",

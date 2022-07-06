@@ -72,5 +72,5 @@ if (mouse_check_button_pressed(mb_right)) {
 	image_index = 2;
 	audio_play_sound(snd_burst, 10, false);
 	audio_sound_gain(snd_burst, 0.7, 5000);
-	alarm[1] = room_speed * 0.1;
+	alarm[0] = room_speed * 0.1;
 }

@@ -20,7 +20,13 @@ if (instance_exists(obj_player)) {
 	image_angle = point_direction(x, y, obj_player.x, obj_player.y);
 	if (position_meeting(x, y, obj_player)) {
 		if (!global.godmode && global.health > 0) {
-			global.health -= 1000;
+			global.health -= 25;
+			
+			var time = unix_timestamp();
+			if (global.hitsoundcooldown < time) {
+				global.hitsoundcooldown = time + 0.5;
+				audio_play_sound(snd_hit, 10, false);
+			}
 		}
 	}
 }

@@ -50,4 +50,10 @@ if (point_distance(x, y, collided.x, collided.y) < 100 && global.bosslastdamaget
 	global.bosslastdamagetaken = time + 2;
 	global.bosshealth -= 100;
 	global.score += 50;
+	
+	var time = unix_timestamp();
+	if (global.hitsoundcooldown < time) {
+		global.hitsoundcooldown = time + 0.5;
+		audio_play_sound(snd_hit, 10, false);
+	}
 }

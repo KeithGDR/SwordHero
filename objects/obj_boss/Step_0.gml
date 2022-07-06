@@ -17,9 +17,15 @@ if (global.winner) {
 
 image_angle += 2;
 
-if (instance_exists(obj_player) && position_meeting(x, y, obj_player) && speed < 1) {
+if (instance_exists(obj_player) && position_meeting(x, y, obj_player)) {
 	if (!global.godmode && global.health > 0) {
 		global.health -= 50;
+			
+		var time = unix_timestamp();
+		if (global.hitsoundcooldown < time) {
+			global.hitsoundcooldown = time + 0.5;
+			audio_play_sound(snd_hit, 10, false);
+		}
 	}
 }
 

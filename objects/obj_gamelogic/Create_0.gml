@@ -11,6 +11,7 @@ global.winner = false;
 global.bosshealth = 1000;
 global.bossmaxhealth = 1000;
 global.bosslastdamagetaken = 0;
+global.hitsoundcooldown = 0;
 
 audio_stop_sound(snd_background);
 audio_play_sound(snd_background, 10, true);

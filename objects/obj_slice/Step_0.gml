@@ -25,4 +25,10 @@ if (position_meeting(x, y, obj_boss) && global.bosslastdamagetaken < time) {
 	global.bosslastdamagetaken = time + 2;
 	global.bosshealth -= 50;
 	global.score += 50;
+	
+	var time = unix_timestamp();
+	if (global.hitsoundcooldown < time) {
+		global.hitsoundcooldown = time + 0.5;
+		audio_play_sound(snd_hit, 10, false);
+	}
 }

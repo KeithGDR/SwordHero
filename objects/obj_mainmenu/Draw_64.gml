@@ -121,7 +121,8 @@ if action {
 			game_end();
 		break;
 		case 4:
-			//menu actions go here
+			randomise();
+			room_goto(final_level);
 		break;
 		case 5:
 			//menu actions go here

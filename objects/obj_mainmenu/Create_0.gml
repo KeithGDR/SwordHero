@@ -11,6 +11,7 @@ menu[0] = "Play";
 menu[1] = "Endless Mode";
 menu[2] = "Options";
 menu[3] = "Quit";
+menu[4] = "Boss Fight";
 menuitems = array_length(menu);
 cursor = 0;
 

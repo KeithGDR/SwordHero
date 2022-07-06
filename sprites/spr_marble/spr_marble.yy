@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "floors",
+    "path": "folders/Sprites/floors.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_marble",
